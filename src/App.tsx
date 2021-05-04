@@ -4,7 +4,7 @@ import { PrivateRoute } from "./components";
 import { history } from "./helpers";
 import { LoginPage } from "./pages/login";
 import TodoPage from "./pages/todo";
-import SimpleRedux from './pages/simple-redux/03'
+import SimpleRedux from './pages/simple-redux/04'
 import { HomePage, Sharepoint } from "./pages/home";
 import AppProvider from "./hooks";
 
