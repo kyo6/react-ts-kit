@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Router, Switch, Route, Redirect } from "react-router-dom";
+import { PrivateRoute } from "./components";
+import { history } from "./helpers";
+import { LoginPage } from "./pages/login";
+import TodoPage from "./pages/todo";
+import SimpleRedux from './pages/simple-redux/03'
+import { HomePage, Sharepoint } from "./pages/home";
+import AppProvider from "./hooks";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <AppProvider>
+        <Switch>
+        <Route path="/redux" component={SimpleRedux} />
+          <Route path="/todo" component={TodoPage} />
+          <Route path="/login" component={LoginPage} />
+          <PrivateRoute exact path="/" component={HomePage} />
+          <PrivateRoute path="/sharepoint/:id" component={Sharepoint} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      </AppProvider>
+    </Router>
   );
 }
 

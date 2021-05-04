@@ -1,0 +1,19 @@
+import React from 'react'
+import MakeCounter from './make-counter-render-prop'
+interface CounterProps {
+  style: React.CSSProperties,
+  minValue?: number,
+  maxValue?: number
+}
+
+const Counter = (props: CounterProps) => {
+  <MakeCounter minValue={props.minValue} maxValue={props.maxValue}>
+    {injectedProps => (
+       <div style={props.style}>
+       <button onClick={injectedProps.onDecrement}> - </button>
+       {injectedProps.value}
+       <button onClick={injectedProps.onIncrement}> + </button>
+     </div>
+    )}
+  </MakeCounter>
+}

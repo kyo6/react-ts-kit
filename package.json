@@ -10,10 +10,23 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.9",
+    "antd": "^4.5.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
+    "react-spring": "^8.0.27",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1",
+    "typescript": "^3.9.7",
+    "uuidv4": "^6.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,6 +37,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://test.api.zhangkong365.com/",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -35,5 +49,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.2"
   }
 }
