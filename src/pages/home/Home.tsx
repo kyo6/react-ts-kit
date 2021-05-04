@@ -11,7 +11,7 @@ const Home = () => {
     }
   }
   console.log('render Home')
-  return <div>
+  return <div className="home-page">
     <div>
       <Link to="/sharepoint/123"> 动态路由 </Link>
     </div>
